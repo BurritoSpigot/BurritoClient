@@ -1,6 +1,9 @@
-package net.fabricmc.example;
+package io.github.burritospigot;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.Identifier;
 
 public class ExampleMod implements ModInitializer {
 	@Override
@@ -10,5 +13,6 @@ public class ExampleMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		System.out.println("Hello Fabric world!");
+		Item.REGISTRY.add(433, new Identifier("burrito", "chorus_fruit"), new ChorusFruitItem(4, 2.4F, false).setTranslationKey("chorus_fruit").setItemGroup(ItemGroup.FOOD));
 	}
 }
